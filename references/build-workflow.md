@@ -1,14 +1,8 @@
 # Build Workflow
 
-## Preferred Project
+## Recommended Commands
 
-When working in this user's workspace, use:
-
-```text
-D:\OpenClaw\workspace\wechat-theme-yuni
-```
-
-Known commands:
+For a Node-based builder, use commands like:
 
 ```powershell
 npm run build
@@ -16,20 +10,20 @@ npm run build:diy
 npm run clean
 ```
 
-Known outputs:
+Recommended outputs:
 
 ```text
 dist/
-  YuNi Warm Paper/
-  YuNi-Warm-Paper-source.zip
-  YuNi-Warm-Paper-DIY/
-  YuNi-Warm-Paper-DIY.zip
-  YuNi-Warm-Paper-DIY-flat.zip
+  ThemeName/
+  ThemeName-source.zip
+  ThemeName-DIY/
+  ThemeName-DIY.zip
+  ThemeName-DIY-flat.zip
 ```
 
 ## Source Of Truth
 
-Use `src/tokens.json` as the palette and metadata source. Do not hand-edit generated files under `dist/`.
+Use `src/tokens.json` or an equivalent source file as the palette and metadata source. Do not hand-edit generated files under `dist/`.
 
 Token groups to preserve:
 
