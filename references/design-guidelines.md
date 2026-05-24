@@ -4,9 +4,9 @@
 
 Design for long-term daily WeChat use: calm, readable, low visual noise, clear hierarchy, and consistent light/dark behavior. Avoid high-saturation novelty palettes that make chat and payment screens tiring.
 
-## Warm Paper Direction
+## Example Direction: Warm Paper
 
-The existing YuNi direction uses:
+One proven direction uses:
 
 - warm paper backgrounds
 - soft brown text and linework
@@ -15,7 +15,7 @@ The existing YuNi direction uses:
 - dark mode with warm dark surfaces, not pure black
 - transparent-background icons with small-object semantics
 
-Representative palette:
+Example palette:
 
 ```json
 {
