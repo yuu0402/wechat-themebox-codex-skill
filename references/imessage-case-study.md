@@ -123,6 +123,8 @@ The repo also contains broader text, app, AA, common-mask, sender/receiver, hand
 - red packet vs transfer/AA
 - normal vs handled vs overtime
 
+For the generated filename inventory from this repository, read [imessage-inventory.md](imessage-inventory.md). For the decoded exported ThemeBox config key list, read [themebox-config-keys.md](themebox-config-keys.md).
+
 ## Helper Script Ideas
 
 The project includes scripts for:
