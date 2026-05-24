@@ -13,6 +13,7 @@ Relevant files:
 - `docs/WeChat/图标设计尺寸解释.md`
 - `iMessageApp_WeChat_For_Themebox/README.md`
 - `iMessageApp_WeChat_For_Themebox/themebox-config.txt`
+- `iMessageApp_WeChat_For_Themebox` repository tree paths
 
 Use this source when:
 
@@ -21,6 +22,7 @@ Use this source when:
 - resolving whether a name is a base name or a file name
 - checking 1x, 2x, and 3x asset sizing guidance
 - studying a complete ThemeBox theme project layout and replaceable asset workflow
+- studying observed real-world filenames and exported ThemeBox config keys
 
 Important source caveats:
 
