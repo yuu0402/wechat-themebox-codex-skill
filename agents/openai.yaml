@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat ThemeBox"
+  short_description: "Build original WeChat ThemeBox-compatible theme packages."
+  default_prompt: "Create or refine an original WeChat ThemeBox theme package from my style direction."
