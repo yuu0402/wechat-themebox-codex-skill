@@ -45,7 +45,7 @@ The `png/`, `svg/`, `skin/`, and `assets/` folders are mostly for organization; 
 
 ## `config.json`
 
-Common fields:
+Common fields. If the target ThemeBox workflow generates `themeId`, do not hand-fill it; otherwise only set it when a known package workflow requires a stable id.
 
 ```json
 {
@@ -61,6 +61,13 @@ Common fields:
   "tabbar_nor_color_dark": "ffffff",
   "tabbar_sel_color": "000000",
   "tabbar_sel_color_dark": "ffffff",
+  "badge_color": "ff3b30",
+  "badge_color_dark": "ff453a",
+  "badge_text_color": "ffffff",
+  "badge_text_color_dark": "ffffff",
+  "tabbar_top_enabled": false,
+  "tabbar_top": -10,
+  "tabbar_hide_title": false,
   "bubble_edge": "25*30*13*30",
   "hide_source_title": true,
   "hongbao_text_color": "#2E2B28",
@@ -71,6 +78,26 @@ Common fields:
 ```
 
 Some samples use `#RRGGBB`; some config examples omit `#` for tabbar colors. Preserve the convention already used by the target project unless device tests prove otherwise.
+
+Config field meanings:
+
+- `name`: theme display name.
+- `auth`: author name.
+- `version`: optional theme version; some workflows auto-generate it.
+- `themeId`: system-generated in the upstream ThemeBox guide; avoid manually setting it unless testing proves the target workflow needs it.
+- `tabbar_nor_color`, `tabbar_nor_color_dark`: tabbar title color for normal state.
+- `tabbar_sel_color`, `tabbar_sel_color_dark`: tabbar title color for selected state.
+- `badge_color`, `badge_color_dark`: unread badge background color.
+- `badge_text_color`, `badge_text_color_dark`: unread badge text color.
+- `tabbar_size`: tabbar icon size, for example `30*30`.
+- `tabbar_top_enabled`: enables custom tabbar icon vertical offset when floating tabbar is disabled.
+- `tabbar_top`: tabbar icon offset value, for example `-10`.
+- `tabbar_hide_title`: hides tabbar titles when floating tabbar is disabled.
+- `luckmoney_text_color`, `luckmoney_text_color_dark`: red-packet open-cover text color.
+- `hongbao_text_color`, `hongbao_text_color_dark`: red-packet/transfer bubble text color.
+- `menu_text_color`, `menu_text_color_dark`: long-press message menu text color.
+- `hide_source_title`: hides source title on red-packet, transfer, mini-program, and similar bubbles.
+- `bubble_edge`: chat bubble cap insets, commonly written as `top*left*bottom*right`.
 
 ## Color Files
 
