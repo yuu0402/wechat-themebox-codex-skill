@@ -20,9 +20,10 @@ Do not copy another author's `themebox.dat`, receipt files, paid assets, or prot
 5. Read [upstream-sources.md](references/upstream-sources.md) when you need the external ThemeDocs source or version caveats.
 6. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
 7. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
-8. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
-9. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
-10. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
+8. Read [original-character-icon-prompt.md](references/original-character-icon-prompt.md) when the user wants every icon hand-drawn around a main original character or mascot.
+9. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
+10. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
+11. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
 6. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
 7. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
 
