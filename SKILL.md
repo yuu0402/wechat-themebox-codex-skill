@@ -16,8 +16,9 @@ Do not copy another author's `themebox.dat`, receipt files, paid assets, or prot
 1. Clarify target style, theme name, author string, and whether the user wants a color-only source package or a fuller DIY package with PNG/SVG resources.
 2. Inspect any existing project first. If no project exists, create a small source-driven builder instead of hand-editing packaged output.
 3. Read [format-and-safety.md](references/format-and-safety.md) before changing package structure or handling third-party samples.
-4. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
-5. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
+4. Read [asset-naming.md](references/asset-naming.md) before naming or mapping theme images.
+5. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
+6. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
 6. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
 7. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
 
