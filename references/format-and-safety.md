@@ -110,6 +110,8 @@ Common DIY resource names:
 - Chat input: `input_bg`, `input_text_bg`, `input_voice_bg`, `input_search_bg`
 - Contact/session avatars: `weixin`, `wepay`, `notification_messages`, `openimbrand`, `brandsessionholder`, `brandservicesessionholder`, `filehelper`, `qqmail`, `brandsessionholder_weapp`
 
+For the full known filename list from the provided naming sheets, read [asset-naming.md](asset-naming.md). Use that file when building a broad theme pack or mapping every icon/resource replacement.
+
 ## `themebox.dat`
 
 Treat `themebox.dat` as unresolved packed media/resource data. Local samples showed high entropy and nonstandard headers, suggesting compression or encryption. Do not reverse engineer protected packs or bypass receipts.
