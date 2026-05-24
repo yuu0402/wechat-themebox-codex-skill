@@ -85,6 +85,17 @@ Then improve quality:
 - Keep naming and dimensions stable.
 - Preserve transparent backgrounds for icons.
 
+## Size And Scale Rules
+
+Follow the upstream ThemeBox documentation's iOS asset guidance:
+
+- Design icons and UI resources at a clean 1x base size when possible.
+- Export matching `@2x` and `@3x` PNG files for resources that use iOS scale suffixes.
+- Do not rely on only `@3x` for small icons unless the measured resource size makes a 2x export impractical.
+- For small icons, reduce fine detail and use slightly stronger strokes so downscaling remains readable.
+- For large backgrounds, proportional downscaling is usually less risky, but still inspect output on device.
+- When replacing an existing resource, match the original/exported dimensions unless a device test proves another size is accepted.
+
 ## Archive Checks
 
 After build, inspect:
