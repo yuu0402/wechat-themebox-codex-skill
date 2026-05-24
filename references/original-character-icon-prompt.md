@@ -15,7 +15,7 @@ Before drawing icons, define a compact character bible and keep it stable across
 - Palette: `{primary_color}`, `{neutral_color}`, `{accent_color_1}`, `{accent_color_2}`, with enough contrast for daily WeChat use.
 - Linework: hand-drawn, soft outline, never harsh black unless the theme explicitly requires it.
 - Texture: clean sticker-like flat illustration with subtle paper grain or gentle brush edges.
-- Reusable character elements: `{signature_mark}`, `{accessory}`, `{small_body_part}`, `{motion_effect}`
+- Reusable character elements: signature silhouette, local body features, exclusive accessories, representative patterns, expression language, gestures, motion effects, particles, trails, or an abstract transformation of the character into part of the icon subject.
 - IP safety: do not imitate Disney, Sanrio, Pokemon, Line Friends, game/anime mascots, celebrity likenesses, or any existing protected character. Keep anatomy, silhouette, face, colors, and accessories original.
 
 ## Codex Prompt
@@ -38,7 +38,7 @@ Goals:
 
 Icon rules:
 - Keep the functional object silhouette clear first, then integrate the character identity.
-- The character element can be: character holding the object, character head as part of the symbol, signature badge, ear/antenna/hair/hand/tail/scarf, or themed motion effect.
+- The main IP element does not need to be the full character. It can come from the character's signature silhouette, local body features, exclusive accessories, representative patterns, expression language, gestures, motion effects, light effects, particles, trails, or an abstract transformation of the character form into part of the icon subject.
 - Do not simply paste a small unrelated character head in the corner. The character element must be integrated with the icon function.
 - Do not draw every asset as the same face. Vary poses and integration by function.
 - Small-size priority: the icon must remain readable at 80-120 px.
