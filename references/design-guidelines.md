@@ -38,8 +38,9 @@ Example palette:
 
 For a premium cartoon ThemeBox theme:
 
-- Use transparent PNG/SVG icon backgrounds.
-- Put the subject on a warm off-white rounded paper base when the icon needs a tile.
+- Use transparent PNG/SVG icon backgrounds with a real alpha channel.
+- Do not export icon resources on white squares, colored rectangles, rounded cards, full-scene backgrounds, or opaque canvas fills. These usually look bad after ThemeBox imports them into WeChat UI.
+- Only use an opaque or semi-opaque base when the resource itself is meant to be a background, chat bubble, panel, tile, surface, cover, or another framed UI asset. If the icon visually needs a small sticker base, keep the canvas transparent around that base.
 - Use soft brown linework instead of black.
 - Keep detail low enough to read at 80-120 px.
 - Make each icon semantic, not a generic circle or card.
@@ -69,13 +70,13 @@ High-impact icons to polish first:
 Use this structure when asking an image model for original icons:
 
 ```text
-Create one WeChat ThemeBox DIY icon for "{icon name}". Style: warm paper, premium soft cartoon, hand-drawn sticker, transparent background PNG. Subject: {specific object}. Colors: warm off-white rounded paper base, soft brown outline, small muted green/orange/blue accents. Requirements: readable at small size, clean edges, no text, no watermark, no black outline, no complex background.
+Create one WeChat ThemeBox DIY icon for "{icon name}". Style: warm paper, premium soft cartoon, hand-drawn sticker, transparent background PNG with real alpha channel. Subject: {specific object}. Colors: soft brown outline, small muted green/orange/blue accents. Requirements: transparent canvas, clean alpha edges, readable at small size, no text, no watermark, no black outline, no complex background. If a sticker base is needed, draw only a small off-white base behind the subject while keeping the rest of the canvas transparent.
 ```
 
 Negative prompt:
 
 ```text
-No photorealism, no 3D render, no heavy shadow, no black outline, no neon colors, no cold blue-purple main palette, no glassmorphism, no metallic texture, no complex background, no watermark, no default system icon style, no generic circle-only placeholder, no dirty edges.
+No photorealism, no 3D render, no heavy shadow, no black outline, no neon colors, no cold blue-purple main palette, no glassmorphism, no metallic texture, no complex background, no watermark, no default system icon style, no generic circle-only placeholder, no dirty edges, no white square background, no colored block background, no opaque canvas.
 ```
 
 ## Review Checklist
@@ -89,3 +90,4 @@ Before shipping a visual update, inspect:
 - badge readability
 - dark mode backgrounds and separators
 - icon set consistency across common screens
+- icon PNG/SVG assets have transparent backgrounds and clean alpha edges

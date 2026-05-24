@@ -34,7 +34,8 @@ Goals:
 1. Generate assets according to ThemeBox naming rules. Read references/asset-naming.md and references/design-guidelines.md first.
 2. Hand-draw every icon. Do not recolor default system icons.
 3. Every icon must include a visible element of {main_original_ip}, but the icon function must remain clear at small size.
-4. Export transparent-background PNG/SVG source assets using exact ThemeBox filenames. When a dark-mode asset is needed, also export the _Dark variant.
+4. Export transparent-background PNG/SVG source assets using exact ThemeBox filenames. PNG icons must have a real alpha channel. When a dark-mode asset is needed, also export the _Dark variant.
+5. Icon resources must not have white square backgrounds, colored block backgrounds, rounded card canvases, or full-scene backgrounds. Only non-icon resources such as covers, wallpapers, panels, chat bubbles, and surface/tile assets may use opaque backgrounds.
 
 Icon rules:
 - Keep the functional object silhouette clear first, then integrate the character identity.
@@ -43,7 +44,7 @@ Icon rules:
 - Do not draw every asset as the same face. Vary poses and integration by function.
 - Small-size priority: the icon must remain readable at 80-120 px.
 - Keep the set unified: consistent outline width, shadow direction, corner radius, color saturation, and internal padding.
-- No text, no watermark, no complex background, no photorealism, no 3D render, no glassmorphism, no copied IP traits.
+- No text, no watermark, no complex background, no white square background, no colored block background, no opaque canvas, no photorealism, no 3D render, no glassmorphism, no copied IP traits.
 
 First batch to generate and review:
 - tabbar_main.png / tabbar_mainHL.png: chat bubble plus {main_original_ip} element.
@@ -71,7 +72,7 @@ Acceptance criteria:
 - Every icon includes an integrated original-character element, not a simple pasted corner badge.
 - The full icon set looks like one hand-drawn theme.
 - No recognizable traits from existing IP.
-- Transparent-background edges are clean.
+- Transparent-background edges are clean; no accidental white/solid-color canvas remains after export.
 - Export size and @3x suffix match the target file.
 ```
 
@@ -80,7 +81,7 @@ Acceptance criteria:
 Use this when generating assets one at a time:
 
 ```text
-Create one original WeChat ThemeBox icon for "{filename}". Function: {function}. Style: {theme_style}, hand-drawn sticker icon, transparent background, readable at 80-120 px. Main original IP: "{main_original_ip}". Character bible: {character_bible}. Integrate the character into the function: {character_integration}. Keep the functional symbol clear first, then add the character identity. Palette: {palette}. No text, no watermark, no complex background, no 3D, no photorealism, no harsh black outline, no copied existing IP, no traits from Disney/Sanrio/Pokemon/Line Friends or other protected characters.
+Create one original WeChat ThemeBox icon for "{filename}". Function: {function}. Style: {theme_style}, hand-drawn sticker icon, transparent background PNG with real alpha channel, readable at 80-120 px. Main original IP: "{main_original_ip}". Character bible: {character_bible}. Integrate the character into the function: {character_integration}. Keep the functional symbol clear first, then add the character identity. Palette: {palette}. Canvas must be transparent with clean alpha edges; do not add a white square, colored block, rounded card, opaque background, scene background, text, watermark, complex background, 3D, photorealism, harsh black outline, copied existing IP, or traits from Disney/Sanrio/Pokemon/Line Friends or other protected characters.
 ```
 
 ## Production Table

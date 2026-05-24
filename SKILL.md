@@ -62,6 +62,7 @@ Follow these standards when making a WeChat theme:
 - Define all colors as source tokens with light and dark variants.
 - Generate `config.json` and XML color files from source data.
 - Keep cover, icon, tabbar, chat bubble, background, badge, and input assets visually consistent.
+- Export icon-style resources with transparent backgrounds and real alpha channels. Do not place WeChat icons on white squares, colored blocks, rounded cards, or decorative scene backgrounds unless the target resource is explicitly a background, panel, bubble, tile, cover, or surface image.
 - Use original artwork only.
 - Keep common UI readable before adding decorative detail.
 - Prefer small, testable package iterations over one large unverified pack.
