@@ -10,6 +10,8 @@ This reference records the known ThemeBox and WeChat DIY resource names extracte
 - Keep transparent backgrounds for icons unless the resource is a background, panel, bubble, or surface image.
 - Keep original dimensions when replacing known resources. If dimensions are unknown, inspect a reference or exported original package and match it.
 - Do not copy third-party art. Use the names below for original replacements only.
+- For names documented without `.png` or `.svg`, generate the extension and scale suffix required by the target ThemeBox workflow. Many icon names are base names that may need `@2x.png`, `@3x.png`, or SVG variants.
+- Version notes from upstream docs use tags such as `#55` and `#56` for names changed or added after WeChat 8.0.54. Keep those as compatibility clues when targeting newer WeChat versions.
 
 ## Required High-Impact Names
 
@@ -802,3 +804,51 @@ These are the first names to cover for a usable visible theme:
 - icons_outlined_wechatpay
 - person_plus_regular
 - person_regular
+
+## Additional Names From AidenYang1 ThemeDocs
+
+These names were extracted from `AidenYang1/ThemeDocs_WeChat_For_Themebox`, especially the WeChat 8.0.54 and 8.0.54+ icon summary files. They include base names, version-specific names, bubble assets, and names documented without file extensions.
+
+- Action_qzone
+- add_friend_icon_reda
+- add_friend_icon_search_wework
+- add_friend_myQR
+- arrow_left_circle_filled
+- AS_QQ
+- ChatRoom_Bubble_HB_Overtime_Receiver
+- ChatRoom_Bubble_HB_Overtime_Receiver_Dark
+- ChatRoom_Bubble_HB_Overtime_Sender_Dark
+- ChatRoom_Bubble_HB_Receiver
+- ChatRoom_Bubble_HB_Receiver_Dark
+- ChatRoom_Bubble_HB_Receiver_Handled
+- ChatRoom_Bubble_HB_Receiver_Handled_Dark
+- ChatRoom_Bubble_HB_Sender
+- ChatRoom_Bubble_HB_Sender_Dark
+- ChatRoom_Bubble_HB_Sender_Handled
+- ChatRoom_Bubble_HB_Sender_Handled_Dark
+- ChatRoom_Bubble_Voice_Receiver
+- ChatRoom_Bubble_Voice_Receiver_Playing1
+- ChatRoom_Bubble_Voice_Receiver_Playing2
+- ChatRoom_Bubble_Voice_Receiver_Playing3
+- ChatRoom_Bubble_Voice_Sender_Playing1
+- ChatRoom_Bubble_Voice_Sender_Playing2
+- ChatRoom_Bubble_Voice_Sender_Playing3
+- doc_filled_16
+- eyes_off_filled
+- favorites_filled_coloful
+- favorites_filled_coloful_Dark
+- icons_filled_cards&offers
+- icons_filled_color_favorites
+- icons_filled_feedback_error
+- icons_filled_text
+- icons_filled_top
+- icons_filled_transfer_language
+- icons_outlined_colorful_favorites_Dark
+- icons_outlined_colorful_game_Dark
+- input_text_bg_Dark
+- moment_filled_Dark
+- person_2_filled
+- play_circle_regular
+- redar_regular
+- ScanQRCodeAction
+- weapp_corner_icon_dark
