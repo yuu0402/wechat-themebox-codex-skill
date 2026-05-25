@@ -107,7 +107,7 @@ ThemeName/
   README.txt
 ```
 
-This is useful for testing token compatibility, but may not load as a complete ThemeBox theme.
+This is a non-release diagnostic artifact for token compatibility, not a final ThemeBox release package. It is useful for testing token mapping and generated files, but may not load as a complete theme.
 
 ### DIY Package
 

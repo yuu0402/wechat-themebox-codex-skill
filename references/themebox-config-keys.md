@@ -2,6 +2,8 @@
 
 This reference records keys observed in the public iMessage ThemeBox project's `themebox-config.txt`. The file is a `themebox#<base64 plist>#config` payload. These keys are practical compatibility clues and may include plugin-specific or user-device-specific settings. Do not copy account-specific values, tokens, wxid values, or personal app settings into a new theme.
 
+Never paste raw `themebox-config.txt`, base64 plist payloads, receipts, or device settings into this public skill or a public theme repo. Extract only the minimal key names or sanitized behavior notes needed for compatibility analysis.
+
 ## Use Rules
 
 - Prefer documented `config.json` fields from `format-and-safety.md` for normal theme packages.

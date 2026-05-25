@@ -61,14 +61,13 @@ Common fields. If the target ThemeBox workflow generates `themeId`, do not hand-
 
 ```json
 {
-  "themeId": "IDExample001",
   "name": "Theme Name",
   "auth": "Author",
   "version": 1,
   "tabbar_size": "28*28",
-  "tabbar_top_enabled": "true",
+  "tabbar_top_enabled": true,
   "tabbar_top": -10,
-  "tabbar_hide_title": "true",
+  "tabbar_hide_title": false,
   "tabbar_nor_color": "000000",
   "tabbar_nor_color_dark": "ffffff",
   "tabbar_sel_color": "000000",
@@ -77,19 +76,11 @@ Common fields. If the target ThemeBox workflow generates `themeId`, do not hand-
   "badge_color_dark": "ff453a",
   "badge_text_color": "ffffff",
   "badge_text_color_dark": "ffffff",
-  "tabbar_top_enabled": false,
-  "tabbar_top": -10,
-  "tabbar_hide_title": false,
-  "bubble_edge": "25*30*13*30",
-  "hide_source_title": true,
-  "hongbao_text_color": "#2E2B28",
-  "hongbao_text_color_dark": "#EDE4DD",
-  "luckmoney_text_color": "#2E2B28",
-  "luckmoney_text_color_dark": "#EDE4DD"
+  "bubble_edge": "25*30*13*30"
 }
 ```
 
-Some samples use `#RRGGBB`; some config examples omit `#` for tabbar colors. Preserve the convention already used by the target project unless device tests prove otherwise.
+If a workflow requires `themeId`, add it once only. Do not mix string booleans and JSON booleans in the same sample; use the exact type required by the target builder. Some samples use `#RRGGBB`; some config examples omit `#` for tabbar colors. Preserve the convention already used by the target project unless device tests prove otherwise.
 
 Config field meanings:
 
@@ -144,7 +135,7 @@ Common DIY resource names:
 - Dark mode assets: add `_Dark` before `.png`
 - Tabbar backgrounds: `tabbar_bg`, `tabbar_bg_Dark`
 - Topbar backgrounds: `topbar_bg`, `topbar_bg_Dark`, `chat_topbar_bg`, `chat_topbar_bg_Dark`
-- Page backgrounds: `default_bg`, `main_bg`, `constacts_bg`, `discover_bg`, `me_bg`, `chat_bg`, `album_bg`
+- Page backgrounds: `default_bg`, `main_bg`, `contacts_bg`, `discover_bg`, `me_bg`, `chat_bg`, `album_bg`
 - Badges: `badge`, `badge_small`
 - Chat input: `input_bg`, `input_text_bg`, `input_voice_bg`, `input_search_bg`
 - Contact/session avatars: `weixin`, `wepay`, `notification_messages`, `openimbrand`, `brandsessionholder`, `brandservicesessionholder`, `filehelper`, `qqmail`, `brandsessionholder_weapp`

@@ -32,3 +32,4 @@ Important source caveats:
 - Some entries are version-specific, such as `#55` or `#56`.
 - Treat the source as practical compatibility documentation, not an official WeChat API contract.
 - Do not copy third-party theme artwork into a new public release unless the license and target use explicitly allow it. Prefer treating iMessage as a structure and workflow reference.
+- The Chinese filenames below are observed upstream filenames and may appear with repo-encoding issues in some environments. Preserve the exact upstream spelling when naming files, even if it looks misspelled or oddly encoded.
