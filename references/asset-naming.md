@@ -9,6 +9,7 @@ This reference records the known ThemeBox and WeChat DIY resource names extracte
 - Provide both normal and selected states when listed, for example tabbar_main.png and tabbar_mainHL.png.
 - Keep transparent backgrounds for icons unless the resource is a background, panel, bubble, or surface image.
 - Keep original dimensions when replacing known resources. If dimensions are unknown, inspect a reference or exported original package and match it.
+- Record each exported icon's pixel size during production. Do not use one universal canvas for all resources unless the target resource family is known to share that size.
 - Do not copy third-party art. Use the names below for original replacements only.
 - For names documented without `.png` or `.svg`, generate the extension and scale suffix required by the target ThemeBox workflow. Many icon names are base names that may need `@2x.png`, `@3x.png`, or SVG variants.
 - Version notes from upstream docs use tags such as `#55` and `#56` for names changed or added after WeChat 8.0.54. Keep those as compatibility clues when targeting newer WeChat versions.
