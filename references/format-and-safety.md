@@ -4,18 +4,17 @@
 
 Observed ThemeBox-style packages use a theme folder rather than a single loose file.
 
-Minimum visible structure from samples:
+Minimum accepted visible structure:
 
 ```text
 ThemeName/
   config.json
-  color.css
-  weui_color.xml
   cover.png
-  themebox.dat
+  icon.png
+  weui_color_new.xml
 ```
 
-Modern/recolor-capable structure may be:
+Optional legacy or device-specific files may be added when the target workflow needs them:
 
 ```text
 ThemeName/
@@ -23,6 +22,8 @@ ThemeName/
   cover.png
   icon.png
   themebox.dat
+  color.css
+  weui_color.xml
   weui_color_new.xml
 ```
 
@@ -41,7 +42,18 @@ ThemeName/
   assets/
 ```
 
-The `png/`, `svg/`, `skin/`, and `assets/` folders are mostly for organization; ThemeBox may also accept resources at the theme root depending on version and import path.
+The `png/`, `svg/`, `skin/`, and `assets/` folders are for organization only. Final release packages must not contain source junk, intermediate build output, or duplicate asset trees unless the builder documents why both the folder-root and flat-root variants are needed.
+
+## Package Rules
+
+- Release zips must contain exactly one top-level theme folder unless the documented flat-root variant is intentionally being built for import testing.
+- The theme folder must contain only accepted release files and resource folders.
+- Do not ship source code, scripts, notes, cache files, temp exports, or raw working directories inside the release zip.
+- Do not rename accepted ThemeBox resource files just to make the archive look cleaner.
+- If a file is required by the target inventory, it must be present at the expected path in the package root or documented subfolder.
+- If a file is not required, leave it out. Do not add placeholder clutter.
+- When the target workflow needs a flat-root variant, keep that variant documented and build it separately from the folder-root package.
+- Use the same internal file layout for both variants unless the ThemeBox version explicitly requires a different import path.
 
 ## `config.json`
 
@@ -154,3 +166,13 @@ Safe path:
 ## Device Import Notes
 
 Likely test paths include extracted folders under `Documents/ThemeBox/diy` or `Documents/ThemeBox/Themes`, depending on ThemeBox version. Test extracted folders as well as zip import. Record exact failure messages and missing filenames.
+
+## Structure Acceptance
+
+A package is only acceptable when:
+
+- the root shape matches the documented variant
+- required files exist at the expected paths
+- no extra source or temp directories are present
+- icon/background separation matches the inventory
+- device import confirms the structure, not only the file list

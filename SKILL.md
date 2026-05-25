@@ -28,8 +28,8 @@ Do not copy another author's `themebox.dat`, receipt files, paid assets, or prot
 13. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
 14. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
 15. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
-14. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
-15. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
+16. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
+17. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
 
 ## Theme Project Standard
 

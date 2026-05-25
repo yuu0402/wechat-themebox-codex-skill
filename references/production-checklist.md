@@ -27,6 +27,11 @@ Use this checklist before building, reviewing, packaging, or handing off a Theme
 - Keep a normal folder-root zip and, when import behavior is unknown, also build a documented flat-root variant.
 - Do not include `__MACOSX`, `.DS_Store`, editor temp files, cache folders, raw prompt dumps, or private notes in release zips.
 - Verify file paths use forward-compatible ASCII-safe names where ThemeBox expects exact resource names.
+- Folder-root release zips must expand to exactly one top-level theme folder.
+- Flat-root zips must be named and documented as test/import variants, not the default release.
+- Release zips must not include `src/`, `scripts/`, `notes/`, `dist/`, `tmp/`, `node_modules/`, `.git/`, drafts, rough generated placeholders, raw references, or working files.
+- If `themebox.dat` is present, it must come from the user's own ThemeBox/custom export flow and be documented; otherwise it should be intentionally absent.
+- Resource folders must not duplicate the same asset in multiple places unless the target ThemeBox version requires both paths and the inventory says so.
 
 ## Naming And Inventory
 
@@ -101,6 +106,7 @@ Use this checklist before building, reviewing, packaging, or handing off a Theme
 - Parse or lint generated JSON and XML.
 - Inspect the zip contents and root layout.
 - Verify required files exist and paths are exactly named.
+- Verify the archive root matches the chosen layout contract from `format-and-safety.md` and `build-workflow.md`.
 - Verify PNG files open, have expected dimensions, and icon resources preserve alpha.
 - Verify final visual assets are hand-drawn original assets, not script placeholders.
 - Verify SVG files, if used, are valid and contain no external references.
