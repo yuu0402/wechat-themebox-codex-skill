@@ -82,3 +82,20 @@ Rules:
 - Compare names, folder placement, scale suffixes, and dimensions.
 - Rebuild all art from original source assets.
 
+## Placement Matrix
+
+Use this to decide where each resource group belongs when building a package.
+
+```text
+group | allowed path(s) | forbidden duplicate paths | fallback when version is unknown
+package identity | root | scattered under multiple folders | root
+config/color files | root | copied into every asset folder | root
+launch art | root or documented target folder | duplicate copies in png/ and root without reason | root first
+page backgrounds | root or png/ | duplicated under svg/ unless vector source needs export | root or png/
+tabbar/topbar/chat topbar | root or png/ | multiple conflicting copies | target root or png/
+chat bubbles / UI surfaces | png/ or root | duplicate root+folder copies unless documented | png/
+icons | png/ and/or svg/ | same asset in root, png/, and svg/ without version note | target inventory path
+vector source | svg/ | raster copy as the only shipped asset when vector is intended | svg plus exported png if required
+legacy helper files | root only when documented | mixed into asset folders without reason | omit until needed
+```
+

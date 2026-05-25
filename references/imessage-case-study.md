@@ -64,6 +64,8 @@ theme-repo/
   scripts/
 ```
 
+Treat `themebox-config.txt` as analysis-only sample material. Do not copy it into a new public release tree unless the current workflow explicitly needs a private export artifact for local inspection. For public theme packages, keep raw export payloads, receipts, and device settings out of the release tree.
+
 ## Practical Adaptation Notes
 
 The README emphasizes:

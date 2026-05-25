@@ -22,18 +22,19 @@ Do not copy another author's `themebox.dat`, receipt files, paid assets, or prot
 7. Read [payment-service-assets.md](references/payment-service-assets.md) when building payment, wallet, red-packet, transfer, or service-grid assets.
 8. Read [package-matrix.md](references/package-matrix.md) when choosing or validating release, flat, or diagnostic package layout.
 9. Read [dimension-manifest.md](references/dimension-manifest.md) when recording or checking observed per-file dimensions.
-10. Read [themebox-dat-playbook.md](references/themebox-dat-playbook.md) when a workflow mentions `themebox.dat` or import failure around it.
-11. Read [asset-naming.md](references/asset-naming.md) before naming or mapping theme images.
-12. Read [icon-size-guidelines.md](references/icon-size-guidelines.md) before exporting icon assets or writing icon batch prompts.
-13. Read [upstream-sources.md](references/upstream-sources.md) when you need the external ThemeDocs source or version caveats.
-14. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
-15. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
-16. Read [original-character-icon-prompt.md](references/original-character-icon-prompt.md) when the user wants every icon hand-drawn around a main original character or mascot.
-17. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
-18. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
-19. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
-20. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
-21. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
+10. Read [inventory-format.md](references/inventory-format.md) before building a complete pack so required/planned files are tracked as data, not memory.
+11. Read [themebox-dat-playbook.md](references/themebox-dat-playbook.md) when a workflow mentions `themebox.dat` or import failure around it.
+12. Read [asset-naming.md](references/asset-naming.md) before naming or mapping theme images.
+13. Read [icon-size-guidelines.md](references/icon-size-guidelines.md) before exporting icon assets or writing icon batch prompts.
+14. Read [upstream-sources.md](references/upstream-sources.md) when you need the external ThemeDocs source or version caveats.
+15. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
+16. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
+17. Read [original-character-icon-prompt.md](references/original-character-icon-prompt.md) when the user wants every icon hand-drawn around a main original character or mascot.
+18. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
+19. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
+20. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
+21. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
+22. Build, inspect the zip layout, generate a contact sheet, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
 
 ## Theme Project Standard
 
@@ -105,7 +106,19 @@ py path\to\wechat-themebox\scripts\validate_theme_package.py dist\ThemeName-DIY-
 To compare the package against an inventory file, add `--inventory` entries:
 
 ```powershell
-py path\to\wechat-themebox\scripts\validate_theme_package.py dist\ThemeName-DIY.zip --inventory references/payment-service-assets.md --inventory references/asset-naming.md
+py path\to\wechat-themebox\scripts\validate_theme_package.py dist\ThemeName-DIY.zip --inventory dist\inventory.md --require-no-placeholder --check-xml --check-svg
+```
+
+To compare against the project dimension manifest, add `--dimension-manifest`:
+
+```powershell
+py path\to\wechat-themebox\scripts\validate_theme_package.py dist\ThemeName-DIY.zip --dimension-manifest dist\dimension-manifest.md
+```
+
+To create a contact sheet:
+
+```powershell
+py D:\OpenClaw\codex-home\skills\wechat-themebox\scripts\make_contact_sheet.py dist\ThemeName-DIY\png dist\contact-sheet.png
 ```
 
 Verify:

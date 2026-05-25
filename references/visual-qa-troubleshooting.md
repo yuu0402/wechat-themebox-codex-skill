@@ -17,6 +17,7 @@ Check these resources and settings first:
 - tabbar icon normal and `HL` selected states
 - `NAVBAR_LOAD_METHOD` and `CHATNAV_LOAD_METHOD` when analyzing advanced ThemeBox config exports
 - WeUI colors for top bars, navigation text, separators, material backgrounds, and glyph colors
+- Topbar assets are functional UI surfaces, not illustrations. Use a flat or very subtle texture/gradient, no character faces, no busy pattern, no large focal object, and no high-contrast detail under title/back/menu icons. Preserve measured height and safe-area padding exactly.
 
 Common symptoms and fixes:
 
@@ -27,6 +28,7 @@ Common symptoms and fixes:
 - Tabbar icons float too high or too low: check `tabbar_size`, `tabbar_top_enabled`, `tabbar_top`, and whether the icon has uneven transparent padding.
 - Selected tab icon looks wrong: ensure `HL` variants are real hand-drawn selected states, not recolored leftovers.
 - Dark mode shows light icons or light backgrounds: provide `_Dark` variants and verify light/dark token pairs.
+- Before approval, test navigation title, back arrow, menu glyphs, and separators against `topbar_bg` and `chat_topbar_bg` in light and dark mode. Aim for at least 4.5:1 contrast for text where practical, and reject any background that makes nav glyphs ambiguous at phone size.
 
 ## Script-Generated Placeholder Rejection
 
@@ -82,6 +84,7 @@ Recommended coverage:
 - `icon.png`: package/app-style theme icon based on the character identity.
 - `launch.png`: startup/splash artwork based on the character, with enough quiet space for WeChat launch behavior.
 - `default_bg.png`, `main_bg.png`, `contacts_bg.png`, `discover_bg.png`, `me_bg.png`, `chat_bg.png`, `album_bg.png`: page backgrounds with subtle character motifs, patterns, or scene elements.
+- Give each page background a restrained role: `main_bg` = broad theme mood, `contacts_bg` = quiet list-safe texture, `discover_bg` = slightly more playful motif, `me_bg` = strongest personal/character cue, `album_bg` = media-safe neutral surface, `chat_bg` = lowest contrast.
 
 Rules:
 
@@ -100,4 +103,3 @@ Before release:
 4. Verify all expected payment/service assets are in the inventory.
 5. Open key screens on device or simulator: chat, home/session, contacts, discover, me, pay/service, search, file preview, settings.
 6. Record every defect as filename plus symptom plus fix.
-

@@ -13,6 +13,8 @@ This reference records the known ThemeBox and WeChat DIY resource names extracte
 - Do not copy third-party art. Use the names below for original replacements only.
 - For names documented without `.png` or `.svg`, generate the extension and scale suffix required by the target ThemeBox workflow. Many icon names are base names that may need `@2x.png`, `@3x.png`, or SVG variants.
 - Version notes from upstream docs use tags such as `#55` and `#56` for names changed or added after WeChat 8.0.54. Keep those as compatibility clues when targeting newer WeChat versions.
+- Preserve observed upstream misspellings when the target export uses them. Examples include `badge_smail@3x.png` and `c2c_cancle_icon@3x.png`; do not silently correct these unless the target inventory proves the corrected spelling is required.
+- When a documented name has no extension, do not guess the final output blindly. Check the target export first; otherwise keep it as reference-only until the project inventory marks a concrete `.png` or `.svg` filename as required.
 
 ## Required High-Impact Names
 

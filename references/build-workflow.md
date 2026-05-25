@@ -19,6 +19,10 @@ dist/
   ThemeName-DIY/
   ThemeName-DIY.zip
   ThemeName-DIY-flat.zip
+  inventory.md
+  dimension-manifest.md
+  contact-sheet.png
+  validation-report.txt
 ```
 
 ## Strict Release Layouts

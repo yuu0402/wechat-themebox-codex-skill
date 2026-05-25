@@ -288,8 +288,6 @@ Never paste raw `themebox-config.txt`, base64 plist payloads, receipts, or devic
 - `HIDE_SHARED_GROUP`
 - `HONGBAO_TEXT_COLOR_ENABLED`
 - `icon`
-- `IiKqFwIhqgSqQBSqR2iR`
-- `IiKqGQcxqgSqZASqQGSR`
 - `INNextDelayedOfferFailsafeDateKey`
 - `INNextFreshmintRefreshDateKey`
 - `INNextHeartbeatDate`

@@ -79,6 +79,24 @@ Negative prompt:
 No photorealism, no 3D render, no heavy shadow, no black outline, no neon colors, no cold blue-purple main palette, no glassmorphism, no metallic texture, no complex background, no watermark, no default system icon style, no generic circle-only placeholder, no dirty edges, no white square background, no colored block background, no opaque canvas.
 ```
 
+## Launch Prompt Pattern
+
+```text
+Create one WeChat ThemeBox launch image for "{filename}". Style: {theme_style}, premium original character art, calm and polished, transparent or lightly textured background only if the target slot allows it, readable at startup. Main original IP: {main_original_ip}. Canvas should be treated as a portrait phone splash or the measured target size if known. Keep the top 15-20% and bottom 12-18% visually quiet, keep the main subject inside the central 60-70% of the canvas, and leave at least 6% padding from every edge for cropping variation. Use low-noise background shapes, soft lighting, controlled contrast, and no text, watermark, UI labels, busy pattern, or cropped important subject. Do not use a generic gradient-only background.
+```
+
+## Wallpaper Prompt Pattern
+
+```text
+Create one WeChat ThemeBox page/background image for "{filename}". Style: {theme_style}, original character worldbuilding, calm and readable behind UI. Main original IP: {main_original_ip}. This is a background, so it may be opaque, but it must stay low-noise and not fight WeChat text or cells. Use subtle motifs, faint patterns, soft scene hints, and restrained contrast. Make chat backgrounds the quietest, main backgrounds slightly more expressive, and do not use dense starfields, neon clutter, busy repeated texture, or a full-scene illustration behind text.
+```
+
+## Topbar Prompt Pattern
+
+```text
+Create one WeChat ThemeBox topbar asset for "{filename}". Style: {theme_style}, functional UI surface, not an illustration. Keep it flat or subtly textured, preserve measured height and safe-area padding, and keep the title/back/menu glyph area visually clean. No character faces, no focal object, no busy motif, no strong contrast under text or icons, and no cropped launch/banner reuse. Dark and light variants should share the same layout language and spacing.
+```
+
 ## Review Checklist
 
 Before shipping a visual update, inspect:
