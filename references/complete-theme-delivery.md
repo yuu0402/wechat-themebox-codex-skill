@@ -25,6 +25,8 @@ A complete character-led theme package must include:
 
 Do not call a package complete while any requested visual resource is still a script placeholder, missing, unreviewed, or undocumented.
 
+For icons, `done` means the final icon is hand-drawn or image-generated original art. A script may resize, align, add transparent padding, export variants, or package the file, but the script may not create the final visible icon subject.
+
 ## Beginner Agent Workflow
 
 1. Read `SKILL.md`, `production-checklist.md`, `package-matrix.md`, `asset-naming.md`, `icon-size-guidelines.md`, and this file.
@@ -34,7 +36,7 @@ Do not call a package complete while any requested visual resource is still a sc
 5. Define package layout and build outputs.
 6. Generate/draw launch, cover, icon, wallpapers, and high-impact UI surfaces first.
 7. Draw icon batches by functional group, not random filename order.
-8. Replace every placeholder with hand-drawn original art before release.
+8. Replace every placeholder with hand-drawn or image-generated original art before release.
 9. Build the package from source.
 10. Run package validation and inventory comparison.
 11. Produce a contact sheet or visual review sheet.

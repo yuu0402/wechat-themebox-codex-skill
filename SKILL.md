@@ -75,7 +75,7 @@ Follow these standards when making a WeChat theme:
 - Keep a production inventory for every batch. Do not leave icon counts, filenames, sizes, or export status implicit.
 - Keep icon and background families separate. If a resource is an icon, treat it as an icon; if it is a background, treat it as a surface resource.
 - All requested resource groups are mandatory unless the user explicitly says to skip them. Do not omit payment, wallet, red-packet, transfer, service, launch, or wallpaper assets because of prompt sensitivity.
-- Every theme asset should be hand-drawn original art. Script generation may assist with packaging, resizing, inventory, and validation, but not with final placeholder icon artwork.
+- Every final icon must be hand-drawn or image-generated original art from an art prompt/source image workflow. Script generation may assist with packaging, resizing, inventory, contact sheets, and validation, but scripts must not draw final icon artwork.
 - Never ship script-drawn placeholders, default-icon recolors, emoji substitutes, text labels, or primitive geometric filler as finished visual assets. Mark temporary placeholders as `placeholder` and replace them before release.
 - Avoid cropping final icon assets. Each icon should read as an independent complete object on a transparent canvas.
 - Vary character integration across the icon family: use different poses, silhouettes, local features, accessories, patterns, gestures, particles, and transformations instead of repeating the same mascot head.

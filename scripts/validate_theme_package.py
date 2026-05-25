@@ -189,6 +189,7 @@ def extract_inventory_names(path: str, require_no_placeholder: bool = False):
         filename_i = headers.index("filename")
         required_i = headers.index("required")
         status_i = headers.index("status") if "status" in headers else None
+        art_source_i = headers.index("art source") if "art source" in headers else None
         for line in lines[header_idx + 1:]:
             cols = [c.strip() for c in line.strip("|").split("|")]
             if len(cols) <= max(filename_i, required_i):
@@ -198,10 +199,14 @@ def extract_inventory_names(path: str, require_no_placeholder: bool = False):
                 continue
             required = cols[required_i].lower()
             status = cols[status_i].lower() if status_i is not None and len(cols) > status_i else ""
+            art_source = cols[art_source_i].lower() if art_source_i is not None and len(cols) > art_source_i else ""
             if required in ("yes", "planned"):
                 names.append(filename)
                 if status and status != "done":
                     errors.append(f"inventory row blocks release: {filename} required={required} status={status}")
+                blocked_sources = {"", "script-generated", "placeholder", "default-icon", "emoji", "text-label", "geometric-filler"}
+                if art_source in blocked_sources:
+                    errors.append(f"inventory art source blocks release: {filename} art_source={art_source or 'blank'}")
             if require_no_placeholder and status == "placeholder":
                 errors.append(f"inventory contains placeholder row: {filename}")
         return sorted(set(names)), errors

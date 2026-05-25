@@ -18,7 +18,8 @@ Use this checklist before building, reviewing, packaging, or handing off a Theme
 - Do not copy another author's `themebox.dat`, `wxid_*.receipt`, paid media, or extracted protected package assets into a release.
 - Samples may be used only for format evidence: folder shape, filenames, dimensions, and replaceable slots.
 - If a user provides a reference image with a recognizable IP, convert it into a generic original direction instead of recreating the character.
-- Final visual assets for a character-led theme must be hand-drawn original art. Do not ship script-drawn primitive placeholder icons, default system icons, emoji substitutions, text labels, or auto-generated geometric filler as finished assets.
+- Final icons for a character-led theme must be hand-drawn or image-generated original art from an art prompt/source image workflow. Do not ship script-drawn primitive placeholder icons, default system icons, emoji substitutions, text labels, or auto-generated geometric filler as finished assets.
+- Each final icon row in the inventory must record its art source, such as `image-generated`, `hand-drawn`, or `edited-from-approved-original`. Rows marked `script-generated`, `placeholder`, or blank source block release.
 
 ## Package Structure
 
@@ -41,7 +42,7 @@ Use this checklist before building, reviewing, packaging, or handing off a Theme
 - Provide both normal and selected states for tabbar icons when listed.
 - Provide dark-mode variants when the resource family or current package uses them.
 - Do not invent new filenames for WeChat replacement slots unless the builder documents them as project-only source files.
-- Maintain a production table with: `filename | function | slot | light/dark/selected state | target size | exported size | alpha checked | generated | device checked | notes`.
+- Maintain a production table with: `filename | function | slot | light/dark/selected state | target size | exported size | alpha checked | art source | generated | device checked | notes`.
 - If a file is not drawn yet, mark it `missing` or `placeholder`; never mark it done because a script created a rough stand-in.
 
 ## Size And Export Rules
