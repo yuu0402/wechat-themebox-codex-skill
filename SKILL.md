@@ -16,17 +16,18 @@ Do not copy another author's `themebox.dat`, receipt files, paid assets, or prot
 1. Clarify target style, theme name, author string, and whether the user wants a color-only source package or a fuller DIY package with PNG/SVG resources.
 2. Inspect any existing project first. If no project exists, create a small source-driven builder instead of hand-editing packaged output.
 3. Read [format-and-safety.md](references/format-and-safety.md) before changing package structure or handling third-party samples.
-4. Read [asset-naming.md](references/asset-naming.md) before naming or mapping theme images.
-5. Read [icon-size-guidelines.md](references/icon-size-guidelines.md) before exporting icon assets or writing icon batch prompts.
-6. Read [upstream-sources.md](references/upstream-sources.md) when you need the external ThemeDocs source or version caveats.
-7. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
-8. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
-9. Read [original-character-icon-prompt.md](references/original-character-icon-prompt.md) when the user wants every icon hand-drawn around a main original character or mascot.
-10. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
-11. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
-12. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
-6. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
-7. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
+4. Read [production-checklist.md](references/production-checklist.md) before any build, review, package, or handoff.
+5. Read [asset-naming.md](references/asset-naming.md) before naming or mapping theme images.
+6. Read [icon-size-guidelines.md](references/icon-size-guidelines.md) before exporting icon assets or writing icon batch prompts.
+7. Read [upstream-sources.md](references/upstream-sources.md) when you need the external ThemeDocs source or version caveats.
+8. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
+9. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
+10. Read [original-character-icon-prompt.md](references/original-character-icon-prompt.md) when the user wants every icon hand-drawn around a main original character or mascot.
+11. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
+12. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
+13. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
+14. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
+15. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
 
 ## Theme Project Standard
 
@@ -64,6 +65,8 @@ Follow these standards when making a WeChat theme:
 - Generate `config.json` and XML color files from source data.
 - Keep cover, icon, tabbar, chat bubble, background, badge, and input assets visually consistent.
 - Export icon-style resources with transparent backgrounds and real alpha channels. Do not place WeChat icons on white squares, colored blocks, rounded cards, or decorative scene backgrounds unless the target resource is explicitly a background, panel, bubble, tile, cover, or surface image.
+- Keep a production inventory for every batch. Do not leave icon counts, filenames, sizes, or export status implicit.
+- Keep icon and background families separate. If a resource is an icon, treat it as an icon; if it is a background, treat it as a surface resource.
 - Use original artwork only.
 - Keep common UI readable before adding decorative detail.
 - Prefer small, testable package iterations over one large unverified pack.
@@ -86,6 +89,7 @@ Verify:
 - no third-party `themebox.dat`, `wxid_*.receipt`, or protected assets are present
 - `cover.png` and `icon.png` exist and have stable dimensions
 - icon assets record exported dimensions, preserve target-slot sizing, and keep transparent alpha
+- all requested resource categories are explicitly inventoried, not implied
 - light and dark token pairs exist for major WeUI colors
 
 Document any remaining blocker, especially ThemeBox requiring `themebox.dat`.
