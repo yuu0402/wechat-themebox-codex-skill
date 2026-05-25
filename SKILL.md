@@ -17,22 +17,23 @@ Do not copy another author's `themebox.dat`, receipt files, paid assets, or prot
 2. Inspect any existing project first. If no project exists, create a small source-driven builder instead of hand-editing packaged output.
 3. Read [format-and-safety.md](references/format-and-safety.md) before changing package structure or handling third-party samples.
 4. Read [production-checklist.md](references/production-checklist.md) before any build, review, package, or handoff.
-5. Read [visual-qa-troubleshooting.md](references/visual-qa-troubleshooting.md) when fixing topbar, launch, wallpaper, background, cropping, or placeholder-art problems.
-6. Read [payment-service-assets.md](references/payment-service-assets.md) when building payment, wallet, red-packet, transfer, or service-grid assets.
-7. Read [package-matrix.md](references/package-matrix.md) when choosing or validating release, flat, or diagnostic package layout.
-8. Read [dimension-manifest.md](references/dimension-manifest.md) when recording or checking observed per-file dimensions.
-9. Read [themebox-dat-playbook.md](references/themebox-dat-playbook.md) when a workflow mentions `themebox.dat` or import failure around it.
-10. Read [asset-naming.md](references/asset-naming.md) before naming or mapping theme images.
-11. Read [icon-size-guidelines.md](references/icon-size-guidelines.md) before exporting icon assets or writing icon batch prompts.
-12. Read [upstream-sources.md](references/upstream-sources.md) when you need the external ThemeDocs source or version caveats.
-13. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
-14. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
-15. Read [original-character-icon-prompt.md](references/original-character-icon-prompt.md) when the user wants every icon hand-drawn around a main original character or mascot.
-16. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
-17. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
-18. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
-19. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
-20. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
+5. Read [complete-theme-delivery.md](references/complete-theme-delivery.md) when the user asks for a complete theme pack or when the agent is new to ThemeBox.
+6. Read [visual-qa-troubleshooting.md](references/visual-qa-troubleshooting.md) when fixing topbar, launch, wallpaper, background, cropping, or placeholder-art problems.
+7. Read [payment-service-assets.md](references/payment-service-assets.md) when building payment, wallet, red-packet, transfer, or service-grid assets.
+8. Read [package-matrix.md](references/package-matrix.md) when choosing or validating release, flat, or diagnostic package layout.
+9. Read [dimension-manifest.md](references/dimension-manifest.md) when recording or checking observed per-file dimensions.
+10. Read [themebox-dat-playbook.md](references/themebox-dat-playbook.md) when a workflow mentions `themebox.dat` or import failure around it.
+11. Read [asset-naming.md](references/asset-naming.md) before naming or mapping theme images.
+12. Read [icon-size-guidelines.md](references/icon-size-guidelines.md) before exporting icon assets or writing icon batch prompts.
+13. Read [upstream-sources.md](references/upstream-sources.md) when you need the external ThemeDocs source or version caveats.
+14. Read [build-workflow.md](references/build-workflow.md) before creating or modifying a build pipeline.
+15. Read [design-guidelines.md](references/design-guidelines.md) before generating visual assets or judging theme quality.
+16. Read [original-character-icon-prompt.md](references/original-character-icon-prompt.md) when the user wants every icon hand-drawn around a main original character or mascot.
+17. Read [imessage-case-study.md](references/imessage-case-study.md) when using the public iMessage ThemeBox project as an engineering/reference case.
+18. Read [imessage-inventory.md](references/imessage-inventory.md) when you need the observed iMessage project filename inventory.
+19. Read [themebox-config-keys.md](references/themebox-config-keys.md) only for advanced exported-config analysis.
+20. Generate from source tokens, not by editing generated `dist` files. Keep light/dark pairs consistent.
+21. Build, inspect the zip layout, and record device-test blockers. Treat ThemeBox import feedback as the source of truth.
 
 ## Theme Project Standard
 
@@ -78,6 +79,8 @@ Follow these standards when making a WeChat theme:
 - Avoid cropping final icon assets. Each icon should read as an independent complete object on a transparent canvas.
 - Vary character integration across the icon family: use different poses, silhouettes, local features, accessories, patterns, gestures, particles, and transformations instead of repeating the same mascot head.
 - Build launch art and wallpapers from the same original character bible when the project is character-led.
+- Treat `launch.png` as a premium character artwork asset, not a generic gradient. Keep wallpapers calm, low-noise, and readable behind WeChat UI.
+- Record dimensions for every generated image. If a target size is unknown, mark it provisional and verify with ThemeBox/device feedback before calling the package final.
 - Use original artwork only.
 - Keep common UI readable before adding decorative detail.
 - Prefer small, testable package iterations over one large unverified pack.
